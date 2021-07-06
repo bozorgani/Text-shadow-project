@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgba(70, 70, 70, 0.664);
+}
+h3{
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #72efdd;
+    position: absolute;
+    font-family: 'Roboto',sans-serif;
+    font-size: 4.5em;
+    letter-spacing: 10px;
+    transition: 0.5s;
+    text-shadow: 0 5px 0 #08302a,
+    0 10px 40px #72efdd33,
+    0 20px 30px #72efdd33,
+    0 10px 40px #72efdd33;
+}
+
+h3:hover{
+    text-shadow:  -10px 10px 0 #003049,
+    0 10px 40px #ffe20033,
+    0 15px 30px #ffe20033,
+    -20px 20px 10px #ffe20033;
+}
+
+h3::before{
+    content: attr(data-title);
+    position: absolute;
+    top: -5px;
+    left: 0;
+    text-shadow: 0 2px 2px #72efdd33;
+    color: #7400b8;
+    transition: 0.5s;
+}
+
+h3::after{
+    content: attr(data-title);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    text-shadow: 0 2px 2px #72efdd33;
+    color: #fca311;
+    transition: 0.5s;
+}
+
+h3:hover::before{
+    top: -10px;
+    left: 10px;
+}
+
+h3:hover::after{
+    top: -20px;
+    left: 20px;
+}
+
